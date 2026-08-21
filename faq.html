@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - One Animal a Day</title>
+  <link href="no-wifi/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+  <link href="no-wifi/aos/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="no-wifi/fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/topic-theme.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-paw"></i>
+        One Animal a Day
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="today.html"><i class="fas fa-calendar-day"></i> Today's Animal</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-container">
+        <div class="faq-intro">
+          <h3>Got Questions? We've Got Answers!</h3>
+          <p>Find answers to common questions about One Animal a Day, our mission, and how to make the most of your daily plant discoveries.</p>
+        </div>
+
+        <!-- Search -->
+        <div class="faq-search">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-input" placeholder="Search frequently asked questions..." id="search-input">
+        </div>
+
+        <!-- Categories -->
+        <div class="faq-categories">
+          <button class="category-btn active" onclick="filterFAQs('all')">All</button>
+          <button class="category-btn" onclick="filterFAQs('general')">General</button>
+          <button class="category-btn" onclick="filterFAQs('technical')">Technical</button>
+          <button class="category-btn" onclick="filterFAQs('privacy')">Privacy</button>
+        </div>
+
+        <!-- FAQ List -->
+        <div id="faq-list">
+          <!-- General -->
+          <div class="faq-item" data-category="general">
+            <button class="faq-question" onclick="toggleFAQ(this)">What is One Animal a Day? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer"><div class="faq-answer-content"><p>It’s a daily educational platform featuring a unique plant every day.</p></div></div>
+          </div>
+          <div class="faq-item" data-category="general">
+            <button class="faq-question" onclick="toggleFAQ(this)">Can I suggest a plant? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer"><div class="faq-answer-content"><p>Yes, use our contact form to suggest plants for future features.</p></div></div>
+          </div>
+
+          <!-- Technical -->
+          <div class="faq-item" data-category="technical">
+            <button class="faq-question" onclick="toggleFAQ(this)">Do I need an account? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer"><div class="faq-answer-content"><p>No, it’s free and requires no signup.</p></div></div>
+          </div>
+          <div class="faq-item" data-category="technical">
+            <button class="faq-question" onclick="toggleFAQ(this)">Is the site mobile-friendly? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer"><div class="faq-answer-content"><p>Yes, it’s fully responsive across all devices.</p></div></div>
+          </div>
+
+          <!-- Privacy -->
+          <div class="faq-item" data-category="privacy">
+            <button class="faq-question" onclick="toggleFAQ(this)">Do you track user data? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer"><div class="faq-answer-content"><p>No, we are 100% ad-free and privacy-first.</p></div></div>
+          </div>
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="no-results" style="display:none;">
+          <span class="icon">🔍</span>
+          <h4>No Results Found</h4>
+          <p>Try adjusting your search terms or browse all categories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" data-aos="fade-up">
+    <div class="container">
+      <div class="contact-card text-center">
+        <span class="icon">💬</span>
+        <h4>Still Have Questions?</h4>
+        <p>If you couldn’t find your answer, reach out to us. We’d love to help 🌿</p>
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="fas fa-info-circle"></i> Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 16px; backdrop-filter: blur(14px); background: rgba(255,255,255,0.9);">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3"><label for="name" class="form-label">Name</label><input type="text" class="form-control" id="name" required></div>
+            <div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email" required></div>
+            <div class="mb-3"><label for="message" class="form-label">Message</label><textarea class="form-control" id="message" rows="4" required></textarea></div>
+            <button type="submit" class="btn btn-success w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>One Animal a Day</h5>
+          <p>Daily knowledge for a greener, calmer mind.</p>
+          <p> &copy; 2025 One Animal a Day. All reserved rights.</p>
+          <div class="social-icons">
+            <!-- Social icons can be added here -->
+          </div>
+        </div>
+      
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Tools/Technologies</h5>
+          <ul class="list-unstyled">
+            <p> <i class="fas fa-laptop"></i> HTML/CSS/JS</p>
+            <p> <i class="fas fa-database"></i> Googlesheet API</p>
+            <p> <i class="fas fa-book"></i> Bootstrap, AOS, GSAP</p>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Privacy & Philosophy</h5>
+          <p> <i class="fas fa-paw"></i> "No login. No ads. Just pure knowlegde for nature enthusiest."</p>
+          <p> <i class="fas fa-earth"></i> "Made to inspire a connection with nature — one plant at a time."</p>
+        </div>
+
+         <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled">
+<p> <i class="fas fa-envelope fa-sm"></i> Animal@info.com</p>
+<p> <i class="fas fa-phone fa-sm"></i> +321 12303848 62</p>
+<p> <i class="fab fa-whatsapp fa-lg" style="font-weight:800"></i> +321 12303848 62</p>
+          </ul>
+        </div>
+
+        </div>
+      </div>
+  </footer>
+
+
+ <!-- Core frameworks first -->
+<script src="no-wifi/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Visual/animation libraries -->
+<script src="no-wifi/aos/dist/aos.js"></script>
+<script src="no-wifi/fontawesome/js/all.js"></script>
+
+<!-- UI plugins like SweetAlert -->
+<!-- <script src="no-wifi/sweetalert2-main/dist/sweetalert2.all.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+  <script>
+    AOS.init();
+
+    function toggleFAQ(button) {
+      const faqItem = button.parentElement;
+      document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) item.classList.remove('active');
+      });
+      faqItem.classList.toggle('active');
+    }
+
+    function filterFAQs(category) {
+      const faqItems = document.querySelectorAll('.faq-item');
+      const noResults = document.getElementById('no-results');
+      let visible = 0;
+      faqItems.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block'; visible++;
+        } else { item.style.display = 'none'; }
+      });
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    document.getElementById('search-input').addEventListener('input', function (e) {
+      const term = e.target.value.toLowerCase();
+      const faqItems = document.querySelectorAll('.faq-item');
+      let visible = 0;
+      faqItems.forEach(item => {
+        const q = item.querySelector('.faq-question').textContent.toLowerCase();
+        const a = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+        if (q.includes(term) || a.includes(term)) { item.style.display = 'block'; visible++; }
+        else item.style.display = 'none';
+      });
+      document.getElementById('no-results').style.display = visible === 0 && term !== '' ? 'block' : 'none';
+    });
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  bootstrap.Modal.getInstance(document.getElementById('contactModal')).hide();
+  Swal.fire({
+    title: 'Message Sent!',
+    text: 'Thank you for contacting us 🌿 We’ll reply soon.',
+    icon: 'success',
+    confirmButtonText: 'OK',
+    confirmButtonColor: getComputedStyle(document.documentElement).getPropertyValue('--primary-blue'),
+    background: getComputedStyle(document.documentElement).getPropertyValue('--success'),
+    color: '#fff',
+  });
+});
+
+  </script>
+
+  <script> window.chtlConfig = { chatbotId: "8529859939" } </script>
+<script async data-id="8529859939" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>

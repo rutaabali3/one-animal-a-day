@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Animal a Day - Discover a new animal every day.</title>
+  <link href="no-wifi/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="no-wifi/aos/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="no-wifi/fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/topic-theme.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/topic-theme.css">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-paw"></i>
+        One Animal a Day
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="today.html"><i class="fas fa-calendar-day"></i> Today's Animal</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" data-aos="fade-up">
+    <div class="container">
+      <h1 class="hero-title">Discover a new animal every day.</h1>
+      <p class="hero-subtitle">Meet remarkable species and the adaptations that help them thrive.</p>
+      <a href="today.html" class="btn btn-success btn-lg">
+        <i class="fas fa-paw"></i>
+        Today's Animal
+      </a>
+    </div>
+  </section>
+
+  <!-- Value Propositions -->
+  <section class="value-props">
+    <div class="container">
+      <h2 class="section-title text-light mb-5">Why Explore Animals With Us?</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-card"><i class="fas fa-brain"></i><h3>Expand Your Knowledge</h3><p>Learn fascinating facts about animals.</p></div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card"><i class="fas fa-spa"></i><h3>Connect With Animals</h3><p>Appreciate knowledge and discovery.</p></div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-card"><i class="fas fa-heart"></i><h3>Improve Wellbeing</h3><p>Nature learning reduces stress.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Featured Fun Facts and Animal Uses -->
+ <section class="featured-section">
+  <div class="container">
+    <div class="row align-items-stretch">
+      
+      <!-- Featured Fun Facts (Left) -->
+      <div class="col-md-6 mb-4 d-flex" data-aos="fade-right">
+        <div class="fun-facts-card w-100">
+          <h2 class="section-title text-center m-1">Fun Facts</h2>
+          <div id="fun-facts-carousel" class="card-content flex-grow-1">
+            <div class="loading-state">Loading amazing animals facts...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Animal Uses (Right) -->
+      <div class="col-md-6 mb-4 d-flex" data-aos="fade-left">
+        <div class="fun-facts-card w-100">
+          <h2 class="section-title text-center m-1">Animal Uses</h2>
+          <div id="plant-uses-carousel" class="card-content flex-grow-1">
+            <div class="loading-state">Loading animal uses...</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Statistics -->
+ <section class="plant-statistics">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Our Growing Community</h2>
+    <div class="row text-center">
+      
+      <div class="col-md-3 col-12 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-paw fa-2x mb-2"></i>
+          <h3>365+</h3>
+          <p>Animals</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-users fa-2x mb-2"></i>
+          <h3>10K+</h3>
+          <p>Enthusiasts</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-globe fa-2x mb-2"></i>
+          <h3>50+</h3>
+          <p>Countries</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-shield-alt fa-2x mb-2"></i>
+          <h3>100%</h3>
+          <p>Ad-Free</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- plant categories -->
+    <section class="plant-categories">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Explore Animals Diversity</h2>
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="category-card">
+            <img src="https://raw.githubusercontent.com/rutaabali3/media_items/main/animals/day-01.webp" alt="Flowering Animals">
+            <div class="category-overlay">
+              <h3>Flowering Animals</h3>
+              <p>Discover the colorful world of angiosperms and their fascinating reproductive strategies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="category-card">
+            <img src="https://raw.githubusercontent.com/rutaabali3/media_items/main/animals/day-02.webp" alt="Succulents & Cacti">
+            <div class="category-overlay">
+              <h3>Succulents & Cacti</h3>
+              <p>Explore plants that have adapted to thrive in the most arid environments on Earth.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="category-card">
+            <img src="https://raw.githubusercontent.com/rutaabali3/media_items/main/animals/day-03.webp" alt="Medicinal Animals">
+            <div class="category-overlay">
+              <h3>Medicinal Animals</h3>
+              <p>Learn about plants that have been used for centuries in traditional medicine practices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="category-card">
+            <img src="https://raw.githubusercontent.com/rutaabali3/media_items/main/animals/day-04.webp" alt="Trees of the World">
+            <div class="category-overlay">
+              <h3>Trees of the World</h3>
+              <p>From mighty redwoods to delicate cherry blossoms, explore the diverse world of trees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action m-0">
+    <div class="container text-center">
+      <h2>Ready to Explore Animals?</h2>
+      <p>Join curious readers expanding their knowledge of animals.</p>
+      <div class="cta-buttons">
+        <a href="today.html" class="btn btn-light btn-lg"><i class="fas fa-calendar-day"></i> Today's Animal</a>
+        <a href="calendar.html" class="btn btn-outline-light btn-lg"><i class="fas fa-calendar-alt"></i> Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>One Animal a Day</h5>
+          <p>Daily knowledge for a greener, calmer mind.</p>
+          <p> &copy; 2025 One Animal a Day. All reserved rights.</p>
+          <div class="social-icons">
+            <!-- Social icons can be added here -->
+          </div>
+        </div>
+      
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Tools/Technologies</h5>
+          <ul class="list-unstyled">
+            <p> <i class="fas fa-laptop"></i> HTML/CSS/JS</p>
+            <p> <i class="fas fa-database"></i> Googlesheet API</p>
+            <p> <i class="fas fa-book"></i> Bootstrap, AOS, GSAP</p>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Privacy & Philosophy</h5>
+          <p> <i class="fas fa-paw"></i> "No login. No ads. Just pure knowlegde for nature enthusiest."</p>
+          <p> <i class="fas fa-earth"></i> "Made to inspire a connection with nature — one plant at a time."</p>
+        </div>
+
+         <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled">
+<p> <i class="fas fa-envelope fa-sm"></i> Animal@info.com</p>
+<p> <i class="fas fa-phone fa-sm"></i> +321 12303848 62</p>
+<p> <i class="fab fa-whatsapp fa-lg" style="font-weight:800"></i> +321 12303848 62</p>
+          </ul>
+        </div>
+
+        </div>
+      </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script src="no-wifi/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="no-wifi/aos/dist/aos.js"></script>
+  <script src="no-wifi/gsap/dist/gsap.min.js"></script>
+
+
+  <script>
+    AOS.init();
+    gsap.from(".hero-title", { duration: 1.5, y: -50, opacity: 0, ease: "bounce" });
+    gsap.from(".hero-subtitle", { duration: 1.5, delay: 0.5, y: -30, opacity: 0 });
+
+    async function fetchAnimalData() {
+      const API_KEY = "AIzaSyC34fdiOJbuA0tCJE2sw6y0vb5hJtXlnH0";
+      const SHEET_ID = "1xJUpe_Q0tVcsrncR38AyKGEsOryRTEAtm92b7wPHLZs";
+      const SHEET_NAME = "animals";
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
+
+      try {
+        const res = await fetch(url);
+        const json = await res.json();
+        const rows = json.values;
+        if (!rows || rows.length <= 1) throw new Error("No data found.");
+        const headers = rows[0];
+        const data = rows.slice(1).map(row => {
+          const obj = {};
+          headers.forEach((h, i) => obj[h] = row[i] || "");
+          return obj;
+        });
+
+        let index = 0;
+        const factsContainer = document.getElementById("fun-facts-carousel");
+        const usesContainer = document.getElementById("plant-uses-carousel");
+
+        function updateFact(plant) {
+          const optimizedURL = plant.image_url ? (plant.image_url.includes("?") ? `${plant.image_url}&w=400` : `${plant.image_url}?w=400`) : "";
+          factsContainer.innerHTML = `
+            <img src="${optimizedURL}" alt="${plant.plant_name}" class="img-fluid rounded shadow mb-3">
+            <h5>${plant.plant_name}</h5>
+            <ul>
+              <li><i class="fas fa-lightbulb"></i> ${plant.fact_1}</li>
+              <li><i class="fas fa-lightbulb"></i> ${plant.fact_2}</li>
+              <li><i class="fas fa-lightbulb"></i> ${plant.fact_3}</li>
+            </ul>`;
+        }
+
+        function updateUses(plant) {
+          const optimizedURL = plant.image_url ? (plant.image_url.includes("?") ? `${plant.image_url}&w=400` : `${plant.image_url}?w=400`) : "";
+          usesContainer.innerHTML = `
+            <img src="${optimizedURL}" alt="${plant.plant_name}" class="img-fluid rounded shadow mb-3">
+            <h5>${plant.plant_name}</h5>
+            <ul>
+              <li><i class="fas fa-paw"></i> ${plant.use_1 || "N/A"}</li>
+              <li><i class="fas fa-paw"></i> ${plant.use_2 || "N/A"}</li>
+              <li><i class="fas fa-paw"></i> ${plant.use_3 || "N/A"}</li>
+            </ul>`;
+        }
+
+        updateFact(data[index]);
+        updateUses(data[index]);
+
+        setInterval(() => {
+          index = (index + 1) % data.length;
+          updateFact(data[index]);
+          updateUses(data[index]);
+        }, 10000);
+      } catch (error) {
+        document.getElementById("fun-facts-carousel").innerHTML = `<p>Error loading facts.</p>`;
+        document.getElementById("plant-uses-carousel").innerHTML = `<p>Error loading uses.</p>`;
+      }
+    }
+    fetchAnimalData();
+  </script>
+      <script> window.chtlConfig = { chatbotId: "8529859939" } </script>
+<script async data-id="8529859939" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
